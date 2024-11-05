@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,7 +33,7 @@
             color: #333;
         }
 
-        input[type="text"], input[type="email"], input[type="password"] {
+        input[type="email"], input[type="password"] {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
@@ -58,63 +58,56 @@
         button:hover {
             background-color: #45a049;
         }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        p a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Sign Up</h2>
-        <form id="signupForm">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
-
+        <h2>Login</h2>
+        <form id="loginForm">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-            <button type="submit">Sign Up</button>
+            <button type="submit">Login</button>
         </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
     </div>
 
     <script>
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const fullName = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
 
-            if (password !== confirmPassword) {
-                alert("Passwords do not match!");
-                return;
-            }
+            fetch('https://sheetdb.io/api/v1/by38hy7zziqmf')
+                .then(response => response.json())
+                .then(data => {
+                    const user = data.find(row => row.Email === email && row.Password === password);
 
-            fetch('https://sheetdb.io/api/v1/by38hy7zziqmf', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    FullName: fullName,
-                    Email: email,
-                    Password: password,
-                    Confirmpassword: confirmPassword
+                    if (user) {
+                        alert('Login successful!');
+                        window.location.href = 'Welcome1.html'; // Redirect to welcome page
+                    } else {
+                        alert('Invalid email or password.');
+                    }
                 })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Sign-up successful!');
-                window.location.href = 'login.html'; // Redirect to login page
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred while signing up.');
-            });
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while logging in.');
+                });
         });
     </script>
 </body>
