@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Empowering Farmers: Agricultural Electricity Support Scheme - Help & Feedback</title>
+    <style>
+        body {  
+            background-image: url('C:\Users\rosha\OneDrive\Pictures/Screenshot 2024-10-23 204054.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: red; 
+        }
+        .container { 
+            width: 30%; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background-color: white; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px;
+            opacity: 0.9;
+        }
+        h1 { 
+            text-align: center; 
+            color: darkgreen; 
+        }
+        form { 
+            display: flex; 
+            flex-direction: column; 
+        }
+        label { 
+            margin-top: 15px; 
+            font-weight: bold;
+            color: darkgray;
+        }
+        input, textarea { 
+            margin-top: 10px; 
+            padding: 10px; 
+            border: 1px solid lightgray; 
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            color: black; 
+            background-color: white;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button { 
+            margin-top: 20px;
+            padding: 12px; 
+            background-color: darkgreen; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 16px;
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+        button:hover { 
+            background-color: mediumseagreen; 
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: gray;         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Help & Feedback</h1>
+        <p style="text-align: center; color: gray;">Empowering Farmers: Agricultural Electricity Support Scheme</p>
+        <form action="/submit-feedback" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="feedback">Your Feedback / Issue:</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+            <label for="suggestion">Any Suggestions:</label>
+            <textarea id="suggestion" name="suggestion" rows="5"></textarea>
+
+            <button type="submit">Submit</button>
+            
+        </form>
+    </div>
+</body>
+</html>
