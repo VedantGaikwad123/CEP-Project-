@@ -1,114 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maharashtra State Solar Policy for Farmers</title>
+    <title>Maharashtra State Solar Policy</title>
     <style>
+       
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: lightgray;
-            color: darkgray; 
         }
 
-        header {
-            background-color: teal;
-            color: white; 
-            padding: 20px;
+
+        .header {
+            background-color: darkred;
+            color: white;
             text-align: center;
+            padding: 40px 20px;
         }
-
-        header h1 {
+        
+        .header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.5em;
         }
 
-        header p {
-            font-size: 1.1rem;
+        .header p {
+            font-size: 1.2em;
             margin-top: 10px;
         }
 
-        main {
-            padding: 20px;
+
+        .content {
+            padding: 30px;
+            background-color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        section {
+  
+        .red-section {
+            background-color: darkred;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
             margin-bottom: 20px;
         }
-
-        h2 {
-            color: teal; 
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+        .red-section h2, .red-section p, .red-section ul {
+            color: white;
         }
 
         ul {
-            list-style-type: square;
-            margin-left: 20px;
+            padding-left: 20px;
+            list-style-type: disc;
         }
 
-        .card {
-            background-color: white;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .content ul {
+            margin-bottom: 20px;
         }
 
-        .card h3 {
-            font-size: 1.5rem;
-            color: teal;
-        }
 
-        footer {
-            background-color: teal; 
-            color: white; 
+        .footer {
+            background-color: darkred;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .footer a {
+            color: white;
+        }
+
+        .footer .up {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .image-item {
+            flex: 1 1 48%;
+        }
+
+        .image-item img {
             width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .image-description {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+   
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+            }
+            .image-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .footer .up {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
         }
     </style>
 </head>
-
 <body>
 
-    <header>
+    <!-- Header Section -->
+    <div class="header">
         <h1>Maharashtra State Solar Policy</h1>
-        <p>Empowering Farmers Through Solar Energy Solutions</p>
-    </header>
+        <p>Promoting Sustainable Solar Energy for Maharashtra's Future</p>
+    </div>
 
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>The Maharashtra State Solar Policy encourages the installation of solar power systems to help farmers achieve energy self-sufficiency. The policy offers a variety of incentives, including financial support for solar pumps and power plants, to promote sustainable agriculture and reduce energy costs.</p>
-        </section>
+    <!-- Objectives Section -->
+    <div class="content">
+        <h2>Objectives of the Policy</h2>
+        <ul>
+            <li>Increase solar power generation to meet energy demands sustainably.</li>
+            <li>Encourage solar power usage in rural and urban areas across Maharashtra.</li>
+            <li>Provide subsidies and financial support for solar installations.</li>
+        </ul>
+    </div>
 
-        <section>
-            <h2>Key Features of the Policy</h2>
-            <div class="card">
-                <h3>Incentives for Solar Pump Installations</h3>
-                <p>The policy provides financial support for the installation of solar irrigation pumps, reducing farmers' reliance on grid and diesel-based energy sources.</p>
+    <!-- Key Initiatives Section -->
+    <div class="content">
+        <h2>Key Initiatives</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="C:\Users\rosha\OneDrive\Pictures\solar.jpg" alt="Solar Power in Rural Maharashtra">
+                <p class="image-title">Solar Power in Rural Maharashtra</p>
+                <p class="image-description">Overview of solar power initiatives in rural Maharashtra.</p>
             </div>
-
-            <div class="card">
-                <h3>Solar Power for Agriculture</h3>
-                <p>Farmers can install solar power plants on their land to power irrigation systems and other farm operations, while surplus energy can be sold to the grid through net metering.</p>
+            <div class="image-item">
+                <img src="C:\Users\rosha\OneDrive\Pictures\solar-panels-1571547732a4l.jpg" alt="Urban Solar Adoption in Maharashtra">
+                <p class="image-title">Urban Solar Adoption in Maharashtra</p>
+                <p class="image-description">Solar policy adoption in urban regions of Maharashtra.</p>
             </div>
-
-            <div class="card">
-                <h3>Subsidies and Financial Assistance</h3>
-                <p>The government offers subsidies and low-interest loans to make solar installations affordable for farmers, facilitating the adoption of solar power solutions.</p>
-            </div>
-
-          
-        </section>
-
-        <section>
+        </div>
+    </div>
+     <!--Benefits section --!>
+     <div class="content">
             <h2>Benefits for Farmers</h2>
             <ul>
                 <li>Reduced energy costs by switching to solar power for irrigation and farm activities.</li>
@@ -117,15 +188,15 @@
                 <li>Contributing to a cleaner environment by reducing the dependency on fossil fuels.</li>
                
             </ul>
+            </div>
         </section>
-
-      
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Maharashtra Solar Policy Initiative </p>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div>
+            © Maharashtra Government - Department of Energy. All rights reserved.
+        </div>
+        <a href="#" class="up"><span class="glyphicon glyphicon-arrow-up"></span></a>
     </footer>
 
 </body>
-
 </html>
