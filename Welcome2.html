@@ -1,186 +1,144 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>PM-KUSUM Scheme</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Loan Schemes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Base styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #83a4d4, #b6fbff);
-            color: #333;
         }
-
-        /* Header */
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
+        .container {
+            width: 300px;
+            margin: 20px auto;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
             position: relative;
         }
-        .header img {
-            height: 40px;
-            vertical-align: middle;
-        }
-        .header .title {
-            margin-left: 10px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Navigation */
-        .nav {
+        .card-header {
             display: flex;
-            justify-content: space-around;
-            background-color: #444;
-            color: white;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .card-header i {
+            background-color: #3b5998;
+            color: #ffffff;
+            border-radius: 50%;
             padding: 10px;
+            margin-right: 10px;
         }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 12px;
-        }
-        .nav a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
-        .menu-toggle {
-            display: none;
-        }
-
-        /* Responsive menu */
-        @media (max-width: 768px) {
-            .nav {
-                flex-direction: column;
-                display: none;
-            }
-            .menu-toggle {
-                display: block;
-                background: #444;
-                color: white;
-                padding: 10px;
-                cursor: pointer;
-                text-align: center;
-            }
-            .menu-toggle.active + .nav {
-                display: flex;
-            }
-        }
-
-        /* Search bar */
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            margin: 20px;
-        }
-        .search-bar input {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .card-header h3 {
             font-size: 16px;
+            margin: 0;
         }
-
-        /* Hidden profile bar */
-        .profile-bar {
-            position: absolute;
-            top: 50px;
-            right: 10px;
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            display: none;
-            width: 200px;
-            z-index: 1000;
+        .card-content {
+            font-size: 14px;
+            color: #333333;
         }
-        .profile-bar.active {
-            display: block;
+        .card-content ul {
+            padding-left: 20px;
+            margin: 10px 0;
         }
-        .profile-bar a {
-            display: block;
-            padding: 10px;
-            color: #333;
-            text-decoration: none;
+        .card-content ul li {
+            margin-bottom: 5px;
         }
-        .profile-bar a:hover {
-            background-color: #f1f1f1;
+        .card-footer {
+            text-align: center;
+            margin-top: 10px;
         }
-        .profile-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+        .card-footer button {
+            background-color: #ffffff;
+            border: 1px solid #3b5998;
+            border-radius: 4px;
+            color: #3b5998;
+            padding: 5px 10px;
             cursor: pointer;
         }
-
-        /* Button with animation */
-        .animated-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        .animated-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        .card-footer button:hover {
+            background-color: #3b5998;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <img src="https://storage.googleapis.com/a1aa/image/kECeFFjfzsvfUJ4wZlfmMFXgy5UjxeRS14LraVZ49bEr6UxdC.jpg" alt="Gov Logo">
-        <span class="title">PM-KUSUM Scheme</span>
-        <i class="fas fa-user profile-icon"></i>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-tractor"></i>
+                <h3>Mukhyamantri Solar Agriculture Feeder Scheme</h3>
+            </div>
+            <div class="card-content">
+                <p><i class="fas fa-info-circle"></i></p>
+                <ul>
+                    <li>This scheme aims to provide dedicated solar power supply to agricultural feeders, helping farmers access reliable energy for irrigation.</li>
+                    <li>It focuses on installing solar panels for agricultural use.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <button>Check Eligibility</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-solar-panel"></i>
+                <h3>PM KUSUM Scheme</h3>
+            </div>
+            <div class="card-content">
+                <p><i class="fas fa-info-circle"></i></p>
+                <ul>
+                    <li>The Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan (KUSUM) scheme supports farmers in installing solar pumps and grid-connected solar power plants.</li>
+                    <li>It provides subsidies to reduce the initial investment burden.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <button>Check Eligibility</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-warehouse"></i>
+                <h3>Maharashtra State Solar Policy</h3>
+            </div>
+            <div class="card-content">
+                <p><i class="fas fa-info-circle"></i></p>
+                <ul>
+                    <li>This policy encourages the installation of solar power systems, offering various incentives for farmers, including financial support for solar pumps and plants to enhance energy self-sufficiency.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <button>Check Eligibility</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-briefcase"></i>
+                <h3>Suryoday Scheme</h3>
+            </div>
+            <div class="card-content">
+                <p><i class="fas fa-info-circle"></i></p>
+                <ul>
+                    <li>This initiative aims to promote solar energy in the agricultural sector by providing financial assistance for the installation of solar irrigation systems, ensuring farmers have access to sustainable energy sources.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <button>Check Eligibility</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <p>Want to know more about the schemes?</p>
+                <p>Central Government Subsidy Schemes are available</p>
+            </div>
+            <div class="card-footer">
+                <button>View all schemes</button>
+            </div>
+        </div>
     </div>
-
-    <!-- Hidden Profile Bar -->
-    <div class="profile-bar">
-        <a href="#">Profile</a>
-        <a href="#">Login</a>
-        <a href="#">Logout</a>
-    </div>
-
-    <!-- Responsive Menu -->
-    <div class="menu-toggle">Menu</div>
-    <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Details</a>
-        <a href="#">Benefits</a>
-        <a href="#">Eligibility</a>
-        <a href="#">Application</a>
-    </nav>
-
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <input type="text" placeholder="Enter scheme name to search...">
-    </div>
-
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Welcome to the PM-KUSUM Scheme</h1>
-        <p>Find out all you need to know about solar energy initiatives for farmers.</p>
-        <a href="#" class="animated-button">Apply Now</a>
-    </div>
-
-    <!-- JavaScript for Menu and Profile Toggle -->
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav').classList.toggle('active');
-        });
-
-        document.querySelector('.profile-icon').addEventListener('click', function() {
-            document.querySelector('.profile-bar').classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
