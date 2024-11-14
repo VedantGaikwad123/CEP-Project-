@@ -1,1 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM KUSUM Scheme</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background-color: #3b3b3b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header img {
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .header .title {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            padding: 15px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 20px;
+        }
+
+        .scheme-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+
+        .scheme-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .tags span {
+            display: inline-block;
+            background-color: #e7f7ff;
+            color: #0056b3;
+            padding: 8px 12px;
+            border-radius: 15px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .check-eligibility {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .check-eligibility a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .check-eligibility a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .tabs div {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .tabs .active {
+            border-bottom: 3px solid #007bff;
+            color: #007bff;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Feedback & Share */
+        .feedback, .share {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .feedback i, .share i {
+            font-size: 24px;
+            color: #007bff;
+            margin: 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .feedback i:hover, .share i:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #3b3b3b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="https://storage.googleapis.com/a1aa/image/kECeFFjfzsvfUJ4wZlfmMFXgy5UjxeRS14LraVZ49bEr6UxdC.jpg" alt="Gov Logo">
+        <span class="title">PM KUSUM Scheme</span>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for scheme details...">
+    </div>
+
+    <!-- Content -->
+    <main class="content">
+        <h2 class="scheme-title">Pradhan Mantri Kisan Urja Suraksha Evam Utthan Mahabhiyan</h2>
+        <p class="scheme-subtitle">Objective: Promoting solar energy usage for agriculture.</p>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active">Details</div>
+            <div class="tab">Benefits</div>
+            <div class="tab">Eligibility</div>
+            <div class="tab">Application</div>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-content active">
+            <p>Pradhan Mantri Kisan Urja Surakshaevam Utthaan Mahabhiyan Yojana (PM-KUSUM Scheme) was launched in March 2019 by the Ministry of New and Renewable Energy (MNRE), to subsidize farmers to install solar irrigation pumps for cultivation. Each farmer will receive a 60% subsidy to set up tube wells and pump sets. They will also get 30% of the total cost as a loan from the Government.</p>
+            <p>The solar pumps assist our farmers in more effective and eco-friendly irrigation. Farmers can sell extra power to the Government, enhancing their income. The scheme comprises three components:</p>
+            <ul>
+                <li>Component A: Install a total of 10GW grid-connected decentralized solar plants and other renewable energy-based power plants (500KW to 2MW each).</li>
+                <li>Component B: Install stand-alone solar pumps of up to 7.5HP capacity.</li>
+                <li>Component C: Provide financial support to solarize 10 lakh grid-connected agricultural pumps.</li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            <ul>
+                <li>The Government plans to generate 28,250 MW of power using solar plants.</li>
+                <li>60% subsidy and 30% loan are provided; farmers bear only 10% of the cost.</li>
+                <li>Farmers can sell extra power to the Government, increasing their income.</li>
+                <li>Utilizing barren land for solar plants offers a stable income for landholders.</li>
+                <li>The solar plants are set up to allow continued cultivation.</li>
+                <li>Using renewable energy helps reduce farm pollution and promotes eco-friendly agriculture.</li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            <p>Eligible applicants include:</p>
+            <ul>
+                <li>Individual farmers</li>
+                <li>Groups of farmers</li>
+                <li>Farmer Producer Organizations (FPOs)</li>
+                <li>Panchayats</li>
+                <li>Co-operatives</li>
+                <li>Water User Associations</li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            <p>Application steps:</p>
+            <ul>
+                <li>Step 1: Visit the official portal and register.</li>
+                <li>Step 2: Fill out the registration form.</li>
+                <li>Step 3: Agree to the declaration and submit.</li>
+                <li>Step 4: Log in for the subsidy scheme.</li>
+                <li>Step 5: Complete the application form, attach documents, and submit.</li>
+            </ul>
+            <p>Required documents:</p>
+            <ul>
+                <li>Aadhar card</li>
+                <li>Land documents (e.g., Khasra-Khatauni)</li>
+                <li>Bank account passbook</li>
+                <li>Declaration form</li>
+                <li>Mobile number</li>
+                <li>Passport-size photo</li>
+            </ul>
+        </div>
+
+        <!-- Apply Button -->
+        <div class="check-eligibility">
+            <a href="https://pmkusum.mnre.gov.in/#/landing">Apply now</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        No new updates available
+    </footer>
+
+    <!-- Script for Tabs -->
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                contents[index].classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
