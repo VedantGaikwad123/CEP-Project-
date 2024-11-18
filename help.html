@@ -6,16 +6,19 @@
     <title>Empowering Farmers: Agricultural Electricity Support Scheme - Help & Feedback</title>
     <style>
         body {  
-            background-image: url('C:\Users\rosha\OneDrive\Pictures/Screenshot 2024-10-23 204054.png');
+            background-image: url('C:\Users\rosha\OneDrive\Pictures\Screenshot 2024-10-23 204054.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: Arial, sans-serif;
             color: red; 
+            margin: 1;
+            padding: 1;
         }
         .container { 
-            width: 30%; 
+            width: 100%;
+            max-width: 600px;
             margin: 50px auto; 
             padding: 20px; 
             background-color: white; 
@@ -66,7 +69,62 @@
         .note {
             margin-top: 20px;
             font-size: 14px;
-            color: gray;         }
+            color: gray;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            input, textarea {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            label {
+                font-size: 12px;
+            }
+
+            input, textarea {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .note {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
