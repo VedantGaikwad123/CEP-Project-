@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>महाराष्ट्र राज्य सोलर धोरण</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+        }
+
+        .header {
+            background-color: darkblue; 
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 40px;
+            background-color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+        }
+
+        .blue-section {
+            background-color: mediumblue; 
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .blue-section h2, .blue-section p, .blue-section ul {
+            color: white;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: square;
+        }
+
+        .content ul {
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: darkslateblue; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .footer a {
+            color: white;
+        }
+
+        .footer .up {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .image-item {
+            flex: 1 1 48%;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .image-description {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+            }
+            .image-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .footer .up {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>महाराष्ट्र राज्य सोलर धोरण</h1>
+        <p>महाराष्ट्राच्या भविष्यसाठी शाश्वत सौर ऊर्जा प्रोत्साहित करणे</p>
+    </div>
+
+    <!-- Objectives Section -->
+    <div class="content">
+        <h2>धोरणाचे उद्दिष्टे</h2>
+        <ul>
+            <li>ऊर्जा मागणींच्या शाश्वत पूर्ततेसाठी सौर ऊर्जा उत्पादन वाढवणे.</li>
+            <li>महाराष्ट्रातील ग्रामीण आणि शहरी क्षेत्रांमध्ये सौर ऊर्जा वापर प्रोत्साहित करणे.</li>
+            <li>सौर उर्जा स्थापनेसाठी अनुदान आणि आर्थिक मदत पुरवणे.</li>
+        </ul>
+    </div>
+
+    <!-- Key Initiatives Section -->
+    <div class="content">
+        <h2>मुख्य उपक्रम</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="C:\Users\rosha\OneDrive\Pictures\solar.jpg" alt="ग्रामीण महाराष्ट्रातील सौर ऊर्जा">
+                <p class="image-title">ग्रामीण महाराष्ट्रातील सौर ऊर्जा</p>
+            </div>
+            <div class="image-item">
+                <img src="C:\Users\rosha\OneDrive\Pictures\solar-panels-1571547732a4l.jpg" alt="शहरी महाराष्ट्रातील सौर ऊर्जा स्वीकार">
+                <p class="image-title">शहरी महाराष्ट्रातील सौर ऊर्जा स्वीकार</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="content">
+        <h2>शेतकऱ्यांसाठी फायदे</h2>
+        <ul>
+            <li>पाणी सिंचन आणि शेत क्रियांसाठी सौर ऊर्जा वापरून ऊर्जा खर्च कमी करणे.</li>
+            <li>सौर ऊर्जा पंप आणि संयंत्रांद्वारे ऊर्जा स्वावलंबन मिळवणे.</li>
+            <li>नेट मीटरिंग योजनेअंतर्गत अतिरिक्त ऊर्जा विक्रीद्वारे अतिरिक्त उत्पन्न मिळवणे.</li>
+            <li>इंधनांच्या वापरावर अवलंबून कमी करून स्वच्छ पर्यावरणात योगदान देणे.</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
