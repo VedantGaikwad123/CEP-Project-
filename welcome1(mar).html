@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सरकारी योजना शोधा</title>
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #00c851;
+        }
+
+        /* Search Bar Styling */
+        .search-bar {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .search-bar form {
+            display: inline-block;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            font-size: 18px;
+            width: 300px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            background-color: #00c851;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #007e33;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .main-content h2 {
+            font-size: 30px;
+            color: #333;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Image Grid Styling */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button styling */
+        .find-button {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .find-button button {
+            background-color: #00c851;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .find-button button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#">मुख्यपृष्ठ</a>
+        <a href="#">योजना</a>
+        <a href="#">आमच्याबद्दल</a>
+        <a href="#">संपर्क</a>
+    </nav>
+
+    <!-- Search Bar with Form -->
+    <div class="search-bar">
+        <form action="search_results.html" method="get">
+            <input type="text" name="query" placeholder="योजनांसाठी शोधा...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>तुमच्यासाठी सरकारी योजना शोधा</h2>
+        <p>तुमच्या पात्रतेनुसार वैयक्तिकृत योजना शोधा</p>
+
+        <!-- Image Grid -->
+        <div class="image-grid">
+            <img src="https://storage.googleapis.com/a1aa/image/64rbvRjObsI9N9wDTooAjwvXa20zKwluRXJaf1iwLzyW060JA.jpg" alt="मोबाइल फोन वापरणारा शेतकरी" onclick="swapImage(0)">
+            <img src="https://storage.googleapis.com/a1aa/image/9Mg1qclD2hI3OhzzH6MrlKpT1ax76lJhkKt8nOnOz0nKad6E.jpg" alt="मैदानात गायी" onclick="swapImage(1)">
+            <img src="https://storage.googleapis.com/a1aa/image/mjfwyxYIZekL10vhyFugSMEpvKDNJmyVUgkN1i7IGKAro1pTA.jpg" alt="मैदानातील पीक" onclick="swapImage(2)">
+        </div>
+    </div>
+
+    <!-- Find Schemes Button -->
+    <div class="find-button">
+        <button>तुमच्यासाठी योजना शोधा <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <script>
+        // JavaScript to swap images on click
+        function swapImage(index) {
+            const images = document.querySelectorAll('.image-grid img');
+            if (images.length < 2) return;
+
+            // Swap the clicked image with the first image
+            const tempSrc = images[0].src;
+            images[0].src = images[index].src;
+            images[index].src = tempSrc;
+        }
+    </script>
+</body>
+</html>
