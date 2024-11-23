@@ -2,136 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Empowering Farmers: Agricultural Electricity Support Scheme - Help & Feedback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback Form</title>
     <style>
-        body {  
-            background-image: url('C:\Users\rosha\OneDrive\Pictures\Screenshot 2024-10-23 204054.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        body {
             font-family: Arial, sans-serif;
-            color: red; 
-            margin: 1;
-            padding: 1;
+            margin: 0;
+            padding: 0;
         }
-        .container { 
-            width: 100%;
+        .container {
+            width: 90%;
             max-width: 600px;
-            margin: 50px auto; 
-            padding: 20px; 
-            background-color: white; 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            opacity: 0.9;
         }
-        h1 { 
-            text-align: center; 
-            color: darkgreen; 
+        h1 {
+            text-align: center;
+            color: darkgreen;
         }
-        form { 
-            display: flex; 
-            flex-direction: column; 
+        form {
+            display: flex;
+            flex-direction: column;
         }
-        label { 
-            margin-top: 15px; 
+        label {
+            margin-top: 15px;
             font-weight: bold;
-            color: darkgray;
         }
-        input, textarea { 
-            margin-top: 10px; 
-            padding: 10px; 
-            border: 1px solid lightgray; 
+        input, textarea {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid lightgray;
             border-radius: 5px;
             width: 100%;
-            font-size: 16px;
-            color: black; 
-            background-color: white;
         }
-        textarea {
-            resize: vertical;
-        }
-        button { 
+        button {
             margin-top: 20px;
-            padding: 12px; 
-            background-color: darkgreen; 
-            color: white; 
-            border: none; 
-            border-radius: 5px; 
+            padding: 12px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
             font-size: 16px;
-            cursor: pointer; 
-            transition: background-color 0.3s ease;
-        }
-        button:hover { 
-            background-color: mediumseagreen; 
-        }
-        .note {
-            margin-top: 20px;
-            font-size: 14px;
-            color: gray;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            label {
-                font-size: 14px;
-            }
-
-            input, textarea {
-                font-size: 14px;
-                padding: 8px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                width: 95%;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            label {
-                font-size: 12px;
-            }
-
-            input, textarea {
-                font-size: 14px;
-                padding: 8px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            .note {
-                font-size: 12px;
-            }
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Help & Feedback</h1>
-        <p style="text-align: center; color: gray;">Empowering Farmers: Agricultural Electricity Support Scheme</p>
-        <form action="/submit-feedback" method="post">
+        <h1>User Feedback</h1>
+        <form id="userForm">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -144,9 +66,40 @@
             <label for="suggestion">Any Suggestions:</label>
             <textarea id="suggestion" name="suggestion" rows="5"></textarea>
 
-            <button type="submit">Submit</button>
-            
+            <button type="button" onclick="submitData()">Submit</button>
         </form>
     </div>
+
+    <script>
+        function submitData() {
+            // Collect data
+            const name = document.getElementById("name").value;
+            const contact = document.getElementById("contact").value;
+            const feedback = document.getElementById("feedback").value;
+            const suggestion = document.getElementById("suggestion").value;
+
+            // Validate input
+            if (!name || !contact || !feedback) {
+                alert("Please fill out all required fields.");
+                return;
+            }
+
+            // Save data to local storage (or send to backend API)
+            const feedbackData = {
+                name,
+                contact,
+                feedback,
+                suggestion
+            };
+
+            // Simulate saving to backend by saving to local storage
+            const existingData = JSON.parse(localStorage.getItem("feedbackDatabase")) || [];
+            existingData.push(feedbackData);
+            localStorage.setItem("feedbackDatabase", JSON.stringify(existingData));
+
+            alert("Your feedback has been submitted!");
+            document.getElementById("userForm").reset();
+        }
+    </script>
 </body>
 </html>
