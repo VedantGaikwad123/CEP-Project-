@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Feedback Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: darkgreen;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid lightgray;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Database</h1>
+        <table id="feedbackTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Feedback</th>
+                    <th>Suggestion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added dynamically -->
+            </tbody>
+        </table>
+        <button onclick="exportTableToExcel('feedbackTable', 'Feedback_Data')">Export to Excel</button>
+    </div>
+
+    <script>
+        // Load data from local storage (simulate backend fetch)
+        function loadData() {
+            const feedbackData = JSON.parse(localStorage.getItem("feedbackDatabase")) || [];
+            const tableBody = document.getElementById("feedbackTable").getElementsByTagName("tbody")[0];
+            tableBody.innerHTML = ""; // Clear previous data
+
+            feedbackData.forEach((data, index) => {
+                const newRow = tableBody.insertRow(index);
+                newRow.innerHTML = `
+                    <td>${data.name}</td>
+                    <td>${data.contact}</td>
+                    <td>${data.feedback}</td>
+                    <td>${data.suggestion}</td>
+                `;
+            });
+        }
+
+        // Export table to Excel
+        function exportTableToExcel(tableID, filename = '') {
+            const table = document.getElementById(tableID);
+            const tableHTML = table.outerHTML.replace(/ /g, '%20');
+
+            const downloadLink = document.createElement("a");
+            const dataType = "application/vnd.ms-excel";
+            filename = filename ? filename + ".xls" : "excel_data.xls";
+
+            downloadLink.href = `data:${dataType}, ${tableHTML}`;
+            downloadLink.download = filename;
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+
+        // Load data when the page is loaded
+        window.onload = loadData;
+    </script>
+</body>
+</html>
